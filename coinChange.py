@@ -10,13 +10,14 @@ class Solution:
                 return dp.get((idx,target))
 
             not_take=0+solve(idx-1,target,dp)   #Not Taking the denomination , so idx-1 ho jayega but target will be same 
-            # 
+            # Ab nhi lenge toh count nhi hoga isileye 0+
             take=float('inf')
 
             if coins[idx]<=target:
-                take=1+solve(idx,target-coins[idx],dp)
+                take=1+solve(idx,target-coins[idx],dp)      #Taking the denomination , so idx wahi rhega but target reduce ho jayega
+            # Ab lenge toh count hoga isileye 1+
 
-            dp[(idx,target)]=min(not_take,take)
+            dp[(idx,target)]=min(not_take,take)     #Add result to DP
             
             return dp[(idx,target)]
         
