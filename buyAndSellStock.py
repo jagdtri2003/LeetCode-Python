@@ -20,6 +20,9 @@ Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0.
 
 """
+
+
+
 class Solution:
     def maxProfit(self, arr: List[int]) -> int:
         minSoFar=float('inf')
