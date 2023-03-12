@@ -1,3 +1,10 @@
+"""
+                                        GFG
+
+Given an array S consisting of N numbers, find the sum of difference between last and first element of each subset.
+
+
+"""
 def sumDiff(S, n):
     #Code here
     ans=0
