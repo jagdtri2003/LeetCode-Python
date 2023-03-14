@@ -65,7 +65,7 @@ class Solution(object):
                     upleft[n-1+row-col]=1
                     lowleft[row+col]=1
                     solve(col+1,board)
-                    board[row][col]="."
+                    board[row][col]="."                         #Backtrack
                     left[row]=0
                     upleft[n-1+row-col]=0
                     lowleft[row+col]=0
